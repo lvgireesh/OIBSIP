@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Calculator | Oasis Infobyte Task 1</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="calculator-container">
+    <!-- Top Brand Color Stripes -->
+    <div class="brand-stripes">
+      <span class="stripe red"></span>
+      <span class="stripe yellow"></span>
+      <span class="stripe blue"></span>
+    </div>
+
+    <!-- Header & Badge -->
+    <div class="calculator-header">
+      <h2>Calculator</h2>
+      <span class="badge">Level 2 - Task 1</span>
+    </div>
+
+    <!-- Display Screen -->
+    <div class="display-screen">
+      <div id="previous-operand" class="previous-operand"></div>
+      <div id="current-operand" class="current-operand">0</div>
+    </div>
+
+    <!-- Secondary Action Bar (History & Backspace) -->
+    <div class="action-bar">
+      <button class="btn-sub" id="history-btn" title="History">🕒</button>
+      <button class="btn-sub" data-action="delete" title="Delete">⌫</button>
+    </div>
+
+    <!-- History Drawer / Panel -->
+    <div id="history-panel" class="history-panel hidden">
+      <div class="history-header">
+        <span>Calculation History</span>
+        <button id="close-history" class="close-btn">&times;</button>
+      </div>
+      <ul id="history-list">
+        <li class="empty-history">No history yet</li>
+      </ul>
+    </div>
+
+    <!-- Keypad Grid -->
+    <div class="calculator-grid">
+      <button class="btn btn-action" data-action="clear">C</button>
+      <button class="btn btn-operator" data-action="operator">±</button>
+      <button class="btn btn-operator" data-action="operator">%</button>
+      <button class="btn btn-operator" data-action="operator">÷</button>
+
+      <button class="btn btn-number" data-number>7</button>
+      <button class="btn btn-number" data-number>8</button>
+      <button class="btn btn-number" data-number>9</button>
+      <button class="btn btn-operator" data-action="operator">×</button>
+
+      <button class="btn btn-number" data-number>4</button>
+      <button class="btn btn-number" data-number>5</button>
+      <button class="btn btn-number" data-number>6</button>
+      <button class="btn btn-operator" data-action="operator">-</button>
+
+      <button class="btn btn-number" data-number>1</button>
+      <button class="btn btn-number" data-number>2</button>
+      <button class="btn btn-number" data-number>3</button>
+      <button class="btn btn-operator" data-action="operator">+</button>
+
+      <button class="btn btn-number btn-zero" data-number>0</button>
+      <button class="btn btn-number" data-number>.</button>
+      <button class="btn btn-equals" data-action="calculate">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

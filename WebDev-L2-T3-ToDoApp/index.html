@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TaskFlow — Modern To-Do Web Application</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="brand-badge">
+        <svg viewbox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+        </svg>
+        Productivity Hub
+      </div>
+      <h1>TaskFlow Pro</h1>
+      <p>
+        Organize your daily workflow, monitor completion velocity, and stay
+        focused with instant persistence.
+      </p>
+    </header>
+    <!-- Main Content Area -->
+    <main>
+      <!-- Task Creation Section -->
+      <section aria-label="Task Creation Form" class="create-task-card">
+        <form class="task-form" id="task-form">
+          <div class="input-wrapper">
+            <svg
+              class="input-icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <line x1="12" x2="12" y1="5" y2="19"></line>
+              <line x1="5" x2="19" y1="12" y2="12"></line>
+            </svg>
+            <input
+              autocomplete="off"
+              class="task-input"
+              id="task-input"
+              placeholder="What needs to be done? Press Enter to add..."
+              required=""
+              type="text"
+            />
+          </div>
+          <button class="btn-add" id="add-btn" type="submit">
+            <svg viewbox="0 0 24 24">
+              <line x1="12" x2="12" y1="5" y2="19"></line>
+              <line x1="5" x2="19" y1="12" y2="12"></line>
+            </svg>
+            Add Task
+          </button>
+        </form>
+      </section>
+      <!-- Overall Summary & Progress Bar -->
+      <section aria-label="Overview Statistics" class="stats-bar">
+        <div id="stats-summary-text">0 total tasks</div>
+        <div class="stats-progress-wrap">
+          <span style="font-size: 0.8rem; color: #64748b">Progress</span>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+          <span
+            id="progress-percent"
+            style="font-weight: 600; min-width: 36px; color: #0f172a"
+            >0%</span
+          >
+        </div>
+      </section>
+      <!-- Two-Column Task Lists Grid -->
+      <section aria-label="Tasks Overview" class="lists-grid">
+        <!-- Pending Tasks Column -->
+        <div class="list-panel" id="pending-section">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span class="title-indicator indicator-pending"></span>
+              <h2>Pending Tasks</h2>
+            </div>
+            <span class="task-badge" id="pending-count-badge">0 pending</span>
+          </div>
+          <div class="task-items-container" id="pending-list" role="list">
+            <!-- Pending items injected dynamically -->
+          </div>
+        </div>
+        <!-- Completed Tasks Column -->
+        <div class="list-panel" id="completed-section">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span class="title-indicator indicator-completed"></span>
+              <h2>Completed Tasks</h2>
+            </div>
+            <span class="task-badge" id="completed-count-badge"
+              >0 completed</span
+            >
+          </div>
+          <div class="task-items-container" id="completed-list" role="list">
+            <!-- Completed items injected dynamically -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-links">
+        <button class="btn-text-action" id="btn-clear-completed">
+          Clear Completed Tasks
+        </button>
+        <span>•</span>
+        <button class="btn-text-action" id="btn-reset-all">
+          Reset All Data
+        </button>
+      </div>
+      <p>
+        Data automatically saved in browser local storage • Pure Vanilla JS
+        &amp; CSS3
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
